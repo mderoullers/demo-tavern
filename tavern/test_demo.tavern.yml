@@ -1,0 +1,37 @@
+---
+test_name: '[TEST] get todos json-placeholder'
+
+stages:
+  - name: get todo 1
+
+    request:
+      url: "{demo.url}/todos/1"
+      method: GET
+      verify: false
+
+    response:
+      status_code: 200
+
+  - name: get todo 2
+
+    request:
+      url: "{demo.url}/todos/2"
+      method: GET
+      verify: false
+
+    response:
+      status_code: 200
+
+---
+test_name: '[TEST] get comments'
+
+stages:
+  - name: get first comment
+
+    request:
+      url: "{demo.url}/comments?postId=1"
+      method: GET
+      verify: false
+
+    response:
+      status_code: 200
